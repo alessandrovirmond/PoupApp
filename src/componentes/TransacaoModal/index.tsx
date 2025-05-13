@@ -12,7 +12,7 @@ interface TransacaoModalProps {
   onCloseModal: () => void;
 }
 
-const TransacaoModal = ({ isOpen, onCloseModal }: TransacaoModalProps) => {
+const TransacaoModal = ({ onCloseModal }: TransacaoModalProps) => {
   const [novaTransacao, setNovaTransacao] = useState({
     nome: "",
     valor: 0,
@@ -27,9 +27,9 @@ const TransacaoModal = ({ isOpen, onCloseModal }: TransacaoModalProps) => {
 
   return (
     <Modal
-      aoFechar={() => onCloseModal()}
+      
       titulo="Adicionar transação"
-      estaAberta={isOpen}
+ 
       icon={<MoneyIcon />}
       aoClicar={() => aoSubmeterFormModal()}
     >
