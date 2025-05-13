@@ -4,7 +4,6 @@ import {
   CloseButton,
   ModalContainer,
   ModalHeader,
-  ModalOverlay,
 } from "./style";
 import Botao from "../Botao";
 
@@ -13,7 +12,7 @@ interface ModalProps {
   titulo: string;
   children: React.ReactNode;
   aoClicar: () => void;
-  cliqueForaModal: boolean;
+  cliqueForaModal?: boolean;
 }
 
 export interface ModalHandle {
@@ -47,7 +46,7 @@ const aoClicarForaModal = (evento: React.MouseEvent<HTMLDialogElement>) => {
 }
 
   return (
-    <ModalOverlay>
+
       <ModalContainer ref={dialogRef} onClick={aoClicarForaModal}>
         <ModalHeader>
           <div>
@@ -69,7 +68,6 @@ const aoClicarForaModal = (evento: React.MouseEvent<HTMLDialogElement>) => {
           </Botao>
         </ButtonGroup>
       </ModalContainer>
-    </ModalOverlay>
   );
 });
 
