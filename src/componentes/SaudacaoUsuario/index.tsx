@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { IUsuario } from "../../types";
+import { obterUsuario } from "../../api";
+import { useEffect, useState } from "react";
 
 export const StyledUsuario = styled.div`
   grid-area: usuario;
@@ -13,10 +16,24 @@ export const StyledUsuario = styled.div`
   }
 `;
 
+
 const SaudacaoUsuario = () => {
+
+  const [usuario, setUsuario] = useState<IUsuario | null> (null)
+
+const buscarUsuario = async () => {
+  const res = await obterUsuario();
+  setUsuario(res[0]);
+}
+
+useEffect(() => {
+  buscarUsuario();
+});
+
+
   return (
     <StyledUsuario>
-      <h1>Olá, Neilton</h1>
+      <h1>Olá, {usuario?.nome}</h1>
       <p>Veja como estão suas finanças hoje.</p>
     </StyledUsuario>
   );

@@ -1,14 +1,14 @@
 export interface IUsuario{
-    id: number;
-    mome: string;
+    id: string;
+    nome: string;
     renda: number
 }
 
-export interface ITransacoes {
-    id: number;
+export interface ITransacao {
+    id: string;
     nome: string;
     valor: number;
-    tipo: "receita" | "despesa";
+    tipo: "receita" | "despesa"; 
     categoria: string;
     data: string;
 }
