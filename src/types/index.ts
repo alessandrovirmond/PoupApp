@@ -8,7 +8,7 @@ export interface ITransacao {
     id: string;
     nome: string;
     valor: number;
-    tipo: "receita" | "despesa";
+    tipo: "receita" | "despesa"; 
     categoria: string;
     data: string;
 }
