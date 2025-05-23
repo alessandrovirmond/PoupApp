@@ -4,7 +4,7 @@ export interface IUsuario{
     renda: number
 }
 
-export interface ITransacoes {
+export interface ITransacao {
     id: number;
     nome: string;
     valor: number;
