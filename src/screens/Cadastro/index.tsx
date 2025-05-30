@@ -13,7 +13,7 @@ import Botao from "../../componentes/Botao/index.js";
 import CampoTexto from "../../componentes/CampoTexto/index.js";
 import Fieldset from "../../componentes/Fieldset/index.js";
 import Label from "../../componentes/Label/index.js";
-import { criarUsuario } from "../../api/index.js";
+import { useAppContex } from "../../context/AppContext.js";
 
 const Cadastro = () => {
   const [form, setForm] = useState({
@@ -25,16 +25,14 @@ const Cadastro = () => {
     setForm((prev) => ({...prev, [campo] : valor}))
   }
 
-
   const navigate = useNavigate();
+  const {criaUsuario} = useAppContex()
 
   const aoSubmeterFormulario = async (evento: React.FormEvent) => {
     evento.preventDefault();
-    try{
-      await criarUsuario(form);
-    }catch(e){
-      console.log(e)
-    }
+   
+     await criaUsuario(form);
+
     navigate("/home");
   };
 
