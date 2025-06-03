@@ -1,3 +1,4 @@
+import { useAppContex } from "../../context/AppContext";
 import { Cartao, CartaoCabecalho, CartaoCorpo, Descricao } from "../Cartao";
 
 const formatador = new Intl.NumberFormat("pt-BR", {
@@ -7,11 +8,14 @@ const formatador = new Intl.NumberFormat("pt-BR", {
 });
 
 const OrcamentoDiario = () => {
+
+  const {usuario} = useAppContex();
+
   return (
     <Cartao>
       <CartaoCabecalho>Orçamento diário disponível</CartaoCabecalho>
       <CartaoCorpo>
-        <Descricao>{formatador.format(100)}</Descricao>
+        <Descricao>{formatador.format(usuario?.orcamentoDiario ?? 0)}</Descricao>
       </CartaoCorpo>
     </Cartao>
   );

@@ -1,7 +1,8 @@
 export interface IUsuario{
     id: string;
     nome: string;
-    renda: number
+    renda: number;
+    orcamentoDiario: number;
 }
 
 export interface ITransacao {
@@ -12,3 +13,4 @@ export interface ITransacao {
     categoria: string;
     data: string;
 }
+
