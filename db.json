@@ -1,11 +1,6 @@
 {
   "usuarios": [
-    {
-      "id": "8ed2",
-      "nome": "Ale",
-      "renda": "1600",
-      "orcamentoDiario": 53.333333333333336
-    }
+    
   ],
   "transacoes": []
 }
