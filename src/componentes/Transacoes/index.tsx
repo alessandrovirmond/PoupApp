@@ -46,7 +46,7 @@ const Transacoes = () => {
 
   const { transacoes, criaTransacao } = useAppContex()
 
-  const [novaTransacao, setNovaTransacao] = useState<Omit<ITransacao, "id">>({
+  const [novaTransacao, setNovaTransacao] = useState<Omit<ITransacao, "id" | "userId">>({
     nome: "",
     valor: 0,
     tipo: "receita",
@@ -122,7 +122,7 @@ const Transacoes = () => {
                 placeholder="10"
                 value={novaTransacao.valor}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  aoMudar("valor", e.target.value)
+                  aoMudar("valor", parseFloat(e.target.value))
                 }
               />
             </Fieldset>
