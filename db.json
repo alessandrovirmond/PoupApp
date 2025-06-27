@@ -1,45 +1,8 @@
 {
   "usuarios": [
-    {
-      "id": "e015",
-      "nome": "ale",
-      "renda": "2939",
-      "orcamentoDiario": 97.96666666666667
-    },
-    {
-      "id": "4d62",
-      "nome": "sasa",
-      "renda": "1200",
-      "orcamentoDiario": 40
-    }
+
   ],
   "transacoes": [
-    {
-      "id": "afdf",
-      "nome": "Net",
-      "valor": 100,
-      "tipo": "despesa",
-      "categoria": "",
-      "data": "2025-06-05",
-      "userId": "e015"
-    },
-    {
-      "id": "836e",
-      "nome": "extra",
-      "valor": 1000,
-      "tipo": "receita",
-      "categoria": "",
-      "data": "2025-06-05",
-      "userId": "e015"
-    },
-    {
-      "id": "8fcf",
-      "nome": "net",
-      "valor": 1000,
-      "tipo": "despesa",
-      "categoria": "zafd",
-      "data": "2025-06-06",
-      "userId": "e015"
-    }
+
   ]
 }
